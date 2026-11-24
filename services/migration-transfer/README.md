@@ -12,7 +12,7 @@ These services help you **move** servers, databases and files from your own data
 | [AWS Database Migration Service](database-migration-service.md) | 🟡 | Moves databases into AWS with little downtime |
 | [AWS DataSync](datasync.md) | 🟡 | Copies large amounts of files to and from AWS |
 | [AWS Transfer Family](transfer-family.md) | 🟡 | SFTP/FTP file transfer straight into S3 or EFS |
-| [AWS Migration Hub](migration-hub.md) | 🔴 | Tracks progress of a migration in one place |
+| [AWS Migration Hub](migration-hub.md) ⛔ | 🔴 | Tracked migration progress – closed to new customers; use AWS Transform |
 
 ## The "7 Rs" of migration (in short)
 

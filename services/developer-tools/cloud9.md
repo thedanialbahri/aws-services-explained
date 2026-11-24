@@ -3,7 +3,7 @@
 **Category:** Developer tools  **Level:** 🟡 Intermediate
 **Last checked against AWS docs:** 2026-11-24 (first draft – needs a human check)
 
-> ⛔ **No longer available to new customers.** Use [CloudShell](cloudshell.md), VS Code with the AWS Toolkit, or a code editor on an EC2 instance instead. <!-- TODO: verify current status -->
+> ⛔ **No longer available to new customers.** AWS closed Cloud9 to new customers on 25 July 2024. Existing customers can keep using it. Use [CloudShell](cloudshell.md), VS Code with the AWS Toolkit, or a code editor on an EC2 instance instead.
 
 ## In one sentence
 

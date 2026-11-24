@@ -38,7 +38,7 @@ Websites need HTTPS. Certificates used to cost money, and if someone forgot to r
 
 ## When NOT to use it (and what to use instead)
 
-- **A certificate installed directly on an EC2 server's web server software.** Standard ACM public certificates can't be downloaded for that; use a load balancer in front, or a free provider like Let's Encrypt on the server. <!-- TODO: verify ACM exportable public certificate feature -->
+- **A certificate installed directly on an EC2 server's web server software.** The free ACM certificates can't be downloaded. Since June 2025 you can request a paid **exportable** public certificate and install it anywhere – or put a load balancer in front, or use a free provider like Let's Encrypt on the server.
 
 ## Real-world example
 

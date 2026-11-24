@@ -1,7 +1,9 @@
 # Amazon SageMaker
 
 **Category:** Machine learning & AI  **Level:** 🔴 Advanced
-**Last checked against AWS docs:** 2026-11-24 (first draft – needs a human check) <!-- TODO: verify naming of SageMaker AI vs SageMaker Unified Studio -->
+**Last checked against AWS docs:** 2026-11-24 (first draft – needs a human check)
+
+> ℹ️ **About the name:** In December 2024 AWS renamed the original ML service to **Amazon SageMaker AI**. The name **Amazon SageMaker** now means a wider data, analytics and AI platform, which includes **SageMaker Unified Studio** and SageMaker AI. This page is about **SageMaker AI**. Some SageMaker AI features, such as Ground Truth, Clarify and Studio Lab, closed to new customers in July 2026.
 
 ## In one sentence
 

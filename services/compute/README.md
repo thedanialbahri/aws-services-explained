@@ -32,6 +32,6 @@
 - **Learning, or need full control of a server?** → [EC2](ec2.md)
 - **A simple website or WordPress blog with a fixed monthly price?** → [Lightsail](lightsail.md)
 - **Code that runs when something happens (a file upload, an API call)?** → [Lambda](lambda.md)
-- **A web app and you don't want to set up servers yourself?** → [Elastic Beanstalk](elastic-beanstalk.md) or [App Runner](../containers/app-runner.md)
+- **A web app and you don't want to set up servers yourself?** → [Elastic Beanstalk](elastic-beanstalk.md) or [ECS](../containers/ecs.md) Express Mode
 
 [← Back to the main index](../../README.md)

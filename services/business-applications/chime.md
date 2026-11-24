@@ -3,7 +3,7 @@
 **Category:** Business applications  **Level:** 🟡 Intermediate
 **Last checked against AWS docs:** 2026-11-24 (first draft – needs a human check)
 
-> ⛔ **Shut down.** AWS ended the Amazon Chime meetings and chat app. Use Microsoft Teams, Zoom, Google Meet or similar. The separate **Amazon Chime SDK** (for building calls into your own apps) is a different service – check its current status. <!-- TODO: verify end date and Chime SDK status -->
+> ⛔ **Shut down.** Amazon Chime stopped taking new customers on 19 February 2025 and support ended on **20 February 2026** (some customers had an extension to 8 September 2026). Use Microsoft Teams, Zoom, Google Meet or similar. The separate **Amazon Chime SDK**, for building calls into your own apps, is **not** affected.
 
 ## In one sentence
 
@@ -22,7 +22,7 @@ It let teams meet and chat online.
 | Word | What it means in plain English |
 |------|-------------------------------|
 | **Chime app** | The meetings and chat product (shut down). |
-| **Chime SDK** | Tools for developers to add calls to their own apps. |
+| **Chime SDK** | Tools for developers to add calls to their own apps (still available). |
 
 ## How it works (step by step)
 
@@ -96,4 +96,4 @@ Not applicable.
 
 ## Learn more
 
-- [AWS product lifecycle page](https://aws.amazon.com/products/lifecycle/)
+- [Update on support for Amazon Chime (AWS blog)](https://aws.amazon.com/blogs/messaging-and-targeting/update-on-support-for-amazon-chime/)

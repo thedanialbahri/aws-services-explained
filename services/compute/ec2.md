@@ -48,7 +48,7 @@ Buying a physical server means paying thousands up front, waiting weeks for deli
 - **Short tasks that run when something happens.** → Use [Lambda](lambda.md) – no server to manage.
 - **A simple website with a fixed price.** → Use [Lightsail](lightsail.md).
 - **You want a database without managing a server.** → Use [RDS](../databases/rds.md).
-- **You don't want to patch operating systems at all.** → Use [Fargate](../containers/fargate.md) or [App Runner](../containers/app-runner.md).
+- **You don't want to patch operating systems at all.** → Use [Fargate](../containers/fargate.md) or [Lambda](lambda.md).
 
 ## Real-world example
 

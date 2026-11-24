@@ -37,7 +37,7 @@ Auditors ask "how do you know AWS's data centres are secure?" You can't inspect 
 
 ## When NOT to use it (and what to use instead)
 
-- **Checking your own account's compliance.** → [AWS Config](../management-governance/config.md), [Security Hub](security-hub.md) or AWS Audit Manager.
+- **Checking your own account's compliance.** → [AWS Config](../management-governance/config.md), or [Security Hub](security-hub.md). (AWS Audit Manager closed to new customers in April 2026.)
 
 ## Real-world example
 

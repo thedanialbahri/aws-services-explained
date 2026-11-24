@@ -24,7 +24,7 @@ Building generative AI apps means choosing models, handling security and connect
 | **Token** | A chunk of text; usage is often charged per token. |
 | **Knowledge base** | Connects a model to your documents (RAG – retrieval-augmented generation). |
 | **Guardrails** | Filters that block unwanted topics or content. |
-| **Agent** | A model that can plan steps and call your APIs. |
+| **Agent** | A model that can plan steps and call your APIs. The original Bedrock Agents (now "Bedrock Agents Classic") closed to new customers in July 2026; new agents are built with **Amazon Bedrock AgentCore**. |
 
 ## How it works (step by step)
 

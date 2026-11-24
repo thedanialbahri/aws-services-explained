@@ -64,7 +64,36 @@ def lambda_handler(event, context):
 
 ### Step 3 – Add the Pillow library
 
-Pillow (the image library) isn't included in Lambda. Package it as a **Lambda layer** built for your function's Python version and architecture, then add the layer to the function. Follow AWS's guide: [Working with layers for Python Lambda functions](https://docs.aws.amazon.com/lambda/latest/dg/python-layers.html). <!-- TODO: add exact layer build commands -->
+Pillow (the image library) isn't included in Lambda, so you package it as a **Lambda layer** (a zip of extra libraries that functions can share).
+
+Pillow contains compiled code, so it must be built for **Linux** and for **your function's Python version and architecture** – even if you're on Windows or a Mac. The `--platform` and `--only-binary` options make pip download the right Linux version.
+
+Run these in a terminal (or [CloudShell](../services/developer-tools/cloudshell.md)). Replace `3.13` with your function's Python version (shown under **Runtime settings**), and keep `x86_64` unless you chose arm64:
+
+```bash
+# Make a folder. Lambda layers for Python must have a top-level "python" folder
+mkdir -p pillow-layer/python && cd pillow-layer
+
+# Download the Linux build of Pillow for Python 3.13 into python/
+pip install pillow --platform manylinux2014_x86_64 --only-binary=:all: \
+  --python-version 3.13 -t python/
+
+# Zip it up – python/ must be at the root of the zip
+zip -r pillow-layer.zip python/
+
+# Upload it as a layer (note the LayerVersionArn in the output)
+aws lambda publish-layer-version --layer-name pillow \
+  --zip-file fileb://pillow-layer.zip \
+  --compatible-runtimes python3.13 --compatible-architectures x86_64
+
+# Attach the layer to your function (paste the LayerVersionArn from above)
+aws lambda update-function-configuration --function-name resize-image \
+  --layers arn:aws:lambda:eu-west-2:123456789012:layer:pillow:1
+```
+
+Prefer clicking? In the function, scroll to **Layers** → **Add a layer** → **Custom layers** → choose `pillow`.
+
+Based on AWS's guide: [Working with layers for Python Lambda functions](https://docs.aws.amazon.com/lambda/latest/dg/python-layers.html).
 
 ### Step 4 – Give the function permission
 
@@ -96,7 +125,7 @@ Pillow (the image library) isn't included in Lambda. Package it as a **Lambda la
 
 1. Delete the function and its log group.
 2. Empty and delete both buckets.
-3. Delete the layer versions and the function's IAM role.
+3. Delete the layer versions (`aws lambda delete-layer-version --layer-name pillow --version-number 1`) and the function's IAM role.
 
 ## What you learned
 

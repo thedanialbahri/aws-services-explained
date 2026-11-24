@@ -3,7 +3,7 @@
 **Category:** Storage  **Level:** 🟢 Beginner
 **Last checked against AWS docs:** 2026-11-24 (first draft – needs a human check)
 
-> ℹ️ This page covers the **S3 Glacier storage classes** you choose inside S3. The older standalone Glacier "vault" service is closed to new customers. <!-- TODO: verify date and current name -->
+> ℹ️ This page covers the **S3 Glacier storage classes** you choose inside S3. The older standalone service – now called **Amazon Glacier**, which stores data in "vaults" – stopped accepting new customers on 15 December 2025. Use the S3 Glacier storage classes instead.
 
 ## In one sentence
 

@@ -44,7 +44,10 @@ Billing metrics only exist in **US East (N. Virginia) `us-east-1`**, so the topi
 
 1. Open **Budgets** → **Create budget** → **Monthly cost budget** template.
 2. Amount `5`, add your email. Create it.
-3. (Optional) Edit the budget's alerts to also notify the `billing-alerts` SNS topic.
+3. (Optional) To also send budget alerts to the `billing-alerts` SNS topic:
+   1. In **SNS** (us-east-1), open the topic → **Edit** → **Access policy**.
+   2. Add a statement that lets `budgets.amazonaws.com` use `SNS:Publish` on the topic, limited to your account. Copy the exact JSON from AWS's guide: [Creating an Amazon SNS topic for budget notifications](https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-sns-policy.html).
+   3. Save, then edit the budget's alert and add the topic's ARN.
 
 ### Step 4 – Create the billing alarm
 
@@ -111,7 +114,44 @@ resource "aws_budgets_budget" "monthly" {
 }
 ```
 
-(Sending budget alerts to SNS also needs a topic policy allowing `budgets.amazonaws.com` to publish. <!-- TODO: verify and add topic policy -->)
+```hcl
+# Your account ID, used in the topic policy below
+data "aws_caller_identity" "me" {}
+
+# Let AWS Budgets and CloudWatch alarms (in this account only) publish to the topic.
+# Without this, budget alerts sent to SNS fail with "AWS Budgets doesn't have access to the SNS topic".
+resource "aws_sns_topic_policy" "billing" {
+  arn = aws_sns_topic.billing.arn
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Sid       = "AllowBudgetsPublish"
+        Effect    = "Allow"
+        Principal = { Service = "budgets.amazonaws.com" }
+        Action    = "SNS:Publish"
+        Resource  = aws_sns_topic.billing.arn
+        Condition = {
+          StringEquals = { "aws:SourceAccount" = data.aws_caller_identity.me.account_id }
+          ArnLike      = { "aws:SourceArn" = "arn:aws:budgets::${data.aws_caller_identity.me.account_id}:*" }
+        }
+      },
+      {
+        Sid       = "AllowCloudWatchAlarmsPublish"
+        Effect    = "Allow"
+        Principal = { Service = "cloudwatch.amazonaws.com" }
+        Action    = "SNS:Publish"
+        Resource  = aws_sns_topic.billing.arn
+        Condition = {
+          StringEquals = { "aws:SourceAccount" = data.aws_caller_identity.me.account_id }
+        }
+      }
+    ]
+  })
+}
+```
+
+> 💡 The topic must be in the same account as the budget, and **not encrypted** unless you also give Budgets access to the KMS key. See [Creating an Amazon SNS topic for budget notifications](https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-sns-policy.html).
 
 ## Test it
 

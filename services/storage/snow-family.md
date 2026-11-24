@@ -3,7 +3,7 @@
 **Category:** Storage  **Level:** 🔴 Advanced
 **Last checked against AWS docs:** 2026-11-24 (first draft – needs a human check)
 
-> ⛔ **No longer available to new customers.** AWS has stopped offering Snowball Edge devices to new customers. Use [AWS DataSync](../migration-transfer/datasync.md) or AWS Data Transfer Terminal instead. <!-- TODO: verify exact date and recommended alternatives -->
+> ⛔ **No longer available to new customers.** Since 7 November 2025, AWS Snowball Edge (the last Snow Family device) is only available to existing customers. For new projects AWS suggests [AWS DataSync](../migration-transfer/datasync.md) for online transfers, AWS Data Transfer Terminal for secure physical transfers, or [AWS Outposts](../compute/outposts.md) for edge computing.
 
 ## In one sentence
 
@@ -40,7 +40,7 @@ Uploading hundreds of terabytes over a normal internet connection could take mon
 
 ## When NOT to use it (and what to use instead)
 
-- **New customers.** → Use [DataSync](../migration-transfer/datasync.md) over the network, or [Direct Connect](../networking/direct-connect.md) for a fast private link.
+- **New customers.** → Use [DataSync](../migration-transfer/datasync.md) over the network, AWS Data Transfer Terminal to drop off your own drives, or [Direct Connect](../networking/direct-connect.md) for a fast private link.
 - **Small amounts of data.** → Just upload to [S3](s3.md).
 
 ## Real-world example

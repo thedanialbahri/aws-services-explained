@@ -81,7 +81,7 @@ Services that run apps packaged as containers (a box holding an app and everythi
 | [Amazon EKS](services/containers/eks.md) | 🔴 | Runs Kubernetes (a popular open-source container system) for you | ✅ |
 | [AWS Fargate](services/containers/fargate.md) | 🟡 | Runs containers without you managing any servers | ✅ |
 | [Amazon ECR](services/containers/ecr.md) | 🟡 | Stores your container images, like a library | ✅ |
-| [AWS App Runner](services/containers/app-runner.md) | 🟡 | Turns your code or container into a running web app in a few clicks | ✅ |
+| [AWS App Runner](services/containers/app-runner.md) | 🟡 | Turned code or a container into a web app – **closed to new customers April 2026** | ⛔ |
 
 ### Storage
 
@@ -222,7 +222,7 @@ Services that collect, process and make sense of data.
 | Service | Level | What it does | Status |
 |---------|-------|--------------|------|
 | [Amazon Athena](services/analytics/athena.md) | 🟡 | Ask questions of files in S3 using SQL | ✅ |
-| [Amazon QuickSight](services/analytics/quicksight.md) | 🟡 | Dashboards and charts for business data | ✅ |
+| [AWS Quick Sight](services/analytics/quicksight.md) (formerly QuickSight) | 🟡 | Dashboards and charts for business data | ✅ |
 | [Amazon Kinesis](services/analytics/kinesis.md) | 🟡 | Collects and processes data streams in real time | ✅ |
 | [AWS Glue](services/analytics/glue.md) | 🟡 | Finds, cleans and moves data between stores | ✅ |
 | [Amazon OpenSearch Service](services/analytics/opensearch.md) | 🟡 | Search and analyse logs and text | ✅ |
@@ -238,15 +238,15 @@ Services that add AI to apps or help you build your own models.
 | Service | Level | What it does | Status |
 |---------|-------|--------------|------|
 | [Amazon Bedrock](services/machine-learning-ai/bedrock.md) | 🟡 | Use ready-made generative AI models through one API | ✅ |
-| [Amazon Q](services/machine-learning-ai/amazon-q.md) | 🟡 | AI assistant for work and for building on AWS | ✅ |
+| [Amazon Q](services/machine-learning-ai/amazon-q.md) | 🟡 | AI assistants – now renamed or replaced (AWS assistant, Kiro, AWS Quick) | ⛔ |
 | [Amazon Rekognition](services/machine-learning-ai/rekognition.md) | 🟡 | Finds objects, text and faces in images and video | ✅ |
-| [Amazon Comprehend](services/machine-learning-ai/comprehend.md) | 🟡 | Understands text, e.g. finds topics and feelings | ✅ |
+| [Amazon Comprehend](services/machine-learning-ai/comprehend.md) | 🟡 | Understands text, e.g. key phrases and feelings | ✅ |
 | [Amazon Polly](services/machine-learning-ai/polly.md) | 🟢 | Turns text into speech | ✅ |
 | [Amazon Transcribe](services/machine-learning-ai/transcribe.md) | 🟢 | Turns speech into text | ✅ |
 | [Amazon Translate](services/machine-learning-ai/translate.md) | 🟢 | Translates text between languages | ✅ |
 | [Amazon Textract](services/machine-learning-ai/textract.md) | 🟡 | Reads text and tables from scanned documents | ✅ |
 | [Amazon Lex](services/machine-learning-ai/lex.md) | 🟡 | Builds chatbots and voice bots | ✅ |
-| [Amazon Kendra](services/machine-learning-ai/kendra.md) | 🔴 | Intelligent search across company documents | ✅ |
+| [Amazon Kendra](services/machine-learning-ai/kendra.md) | 🔴 | Intelligent search across company documents – **closed to new customers July 2026** | ⛔ |
 | [Amazon Personalize](services/machine-learning-ai/personalize.md) | 🔴 | Product and content recommendations | ✅ |
 | [Amazon SageMaker](services/machine-learning-ai/sagemaker.md) | 🔴 | Build, train and run your own machine learning models | ✅ |
 | [Amazon Forecast](services/machine-learning-ai/forecast.md) | 🔴 | Predicts future values from past data | ⛔ |
@@ -261,7 +261,7 @@ Services that move servers, databases and files into AWS.
 | [AWS Database Migration Service](services/migration-transfer/database-migration-service.md) | 🟡 | Moves databases into AWS with little downtime | ✅ |
 | [AWS DataSync](services/migration-transfer/datasync.md) | 🟡 | Copies large amounts of files to and from AWS | ✅ |
 | [AWS Transfer Family](services/migration-transfer/transfer-family.md) | 🟡 | SFTP/FTP file transfer straight into S3 or EFS | ✅ |
-| [AWS Migration Hub](services/migration-transfer/migration-hub.md) | 🔴 | Tracks progress of a migration in one place | ✅ |
+| [AWS Migration Hub](services/migration-transfer/migration-hub.md) | 🔴 | Tracked migration progress – **closed to new customers November 2025** | ⛔ |
 
 ### End-user computing
 
@@ -301,8 +301,8 @@ Ready-made apps for communication and customer service.
 |---------|-------|--------------|------|
 | [Amazon SES](services/business-applications/ses.md) | 🟢 | Sends and receives email from your app | ✅ |
 | [Amazon Connect](services/business-applications/connect.md) | 🟡 | Cloud contact centre (phone and chat support) | ✅ |
-| [Amazon WorkMail](services/business-applications/workmail.md) | 🟡 | Business email and calendar – **shutting down** | ⛔ |
-| [Amazon Chime](services/business-applications/chime.md) | 🟡 | Online meetings and chat – **shutting down** | ⛔ |
+| [Amazon WorkMail](services/business-applications/workmail.md) | 🟡 | Business email and calendar – **ends 31 March 2027** | ⛔ |
+| [Amazon Chime](services/business-applications/chime.md) | 🟡 | Online meetings and chat – **ended 20 February 2026** | ⛔ |
 
 ### Media services
 
@@ -340,7 +340,7 @@ Small projects that join several services together (see [`examples/`](examples/R
 ## 🔎 Status of this content
 
 - Every page is a **first draft** written on 2026-11-24. Each page's "Last checked" line says it still needs a human check against the AWS docs.
-- Places where a fact needs confirming are marked `<!-- TODO: verify -->` in the page source.
+- On 2026-11-24 the service statuses (closed, renamed or retired services) were checked against AWS announcements and updated. Anything still unconfirmed is marked `<!-- TODO: verify -->` in the page source.
 - CLI and Terraform examples are written for the AWS provider `~> 6.0` but haven't all been run yet. Run `terraform plan` first, and please [open an issue](https://github.com/thedanialbahri/aws-services-explained/issues) if something is wrong.
 
 ## 🤝 How to contribute

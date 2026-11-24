@@ -1,7 +1,9 @@
 # AWS App Runner
 
 **Category:** Containers  **Level:** 🟡 Intermediate
-**Last checked against AWS docs:** 2026-11-24 (first draft – needs a human check) <!-- TODO: verify App Runner's current availability status -->
+**Last checked against AWS docs:** 2026-11-24 (first draft – needs a human check)
+
+> ⛔ **No longer available to new customers.** App Runner closed to new customers on 30 April 2026. Existing customers can keep using it, but no new features are planned. AWS recommends **Amazon ECS Express Mode** instead – see [ECS](ecs.md).
 
 ## In one sentence
 
@@ -13,7 +15,7 @@ It's like a takeaway kitchen you can rent by the minute, already fitted with ove
 
 ## What problem does it solve?
 
-Even ECS on Fargate needs a cluster, task definitions, a load balancer and networking. App Runner hides all of that for simple web apps and APIs.
+Even ECS on Fargate needs a cluster, task definitions, a load balancer and networking. App Runner hid all of that for simple web apps and APIs. ECS Express Mode now aims to do the same job inside ECS.
 
 ## Key words to know
 
@@ -21,7 +23,8 @@ Even ECS on Fargate needs a cluster, task definitions, a load balancer and netwo
 |------|-------------------------------|
 | **Service** | Your running app in App Runner. |
 | **Source** | A container image in ECR or code in a GitHub repo. |
-| **Auto scaling** | Adds or removes instances with traffic. |
+| **Maintenance mode** | AWS keeps the service running and secure, but takes no new customers and adds no features. |
+| **ECS Express Mode** | AWS's recommended replacement: a simpler way to run a web container on ECS. |
 
 ## How it works (step by step)
 
@@ -32,51 +35,52 @@ Even ECS on Fargate needs a cluster, task definitions, a load balancer and netwo
 
 ## When to use it
 
-- Simple web apps and APIs, prototypes.
+- Only if your account already uses App Runner.
 
 ## When NOT to use it (and what to use instead)
 
+- **Any new project.** → [ECS](ecs.md) Express Mode, or [ECS on Fargate](fargate.md).
 - **Complex networking or background workers.** → [ECS](ecs.md).
 
 ## Real-world example
 
-**Scenario:** A student builds a Flask app for a hackathon.
+**Scenario:** A student built a Flask app for a hackathon in 2025 and deployed it with App Runner.
 
-**How it helps:** App Runner deploys it from GitHub in minutes with HTTPS.
+**Today:** The app keeps running, but a new student starting now would deploy the same container with ECS Express Mode.
 
 **What it looks like:**
 
 ```
- GitHub repo ──► App Runner (build + run + HTTPS) ──► https://xyz.awsapprunner.com
+ (existing) GitHub repo ──► App Runner ──► https://xyz.awsapprunner.com
+ (new)      Container image ──► ECS Express Mode ──► HTTPS URL
 ```
 
 ## Try it yourself
 
-> ⚠️ **Cost warning:** Charged for vCPU and memory while active, and memory while idle. Pause or delete the service after testing.
+> ⚠️ **Cost warning:** Not applicable for new customers.
 
 ### Option A – Using the AWS Console (clicking in the website)
 
-1. Open **App Runner** → **Create service**.
-2. Source: **Container registry** → **Amazon ECR Public** → image `public.ecr.aws/aws-containers/hello-app-runner:latest`, port 8000.
-3. Create, then open the default domain.
+Not applicable – closed to new customers. Try the [ECS page](ecs.md) instead.
 
 ### Option B – Using the AWS CLI (typing commands)
 
 ```bash
+# Existing customers: list your App Runner services
 aws apprunner list-services
 ```
 
 ### Option C – Using Terraform (infrastructure as code)
 
-Possible with `aws_apprunner_service`.
+Not applicable for new customers.
 
 ### Clean up (delete what you made)
 
-1. Open the service → **Actions** → **Delete**.
+Existing customers: open the service → **Actions** → **Delete** for any service you no longer need.
 
 ## How much does it cost?
 
-Per vCPU-second and GB-second while handling requests, plus memory while provisioned but idle, plus build minutes.
+Existing customers pay per vCPU-second and GB-second while handling requests, plus memory while idle, plus build minutes.
 
 Official pricing: <https://aws.amazon.com/apprunner/pricing/>
 
@@ -86,21 +90,21 @@ Official pricing: <https://aws.amazon.com/apprunner/pricing/>
 
 ## Common mistakes
 
-- Leaving test services running.
+- Following older tutorials that start with "Create an App Runner service".
 
 ## Works well with
 
-- [ECR](ecr.md), [Secrets Manager](../security-identity-compliance/secrets-manager.md).
+- [ECR](ecr.md), [ECS](ecs.md).
 
 ## Quick check (test yourself)
 
-1. What sources can App Runner deploy from?
-   <details><summary>Answer</summary>Container images (ECR) or source code repositories.</details>
-2. Do you set up a load balancer?
-   <details><summary>Answer</summary>No.</details>
-3. When would you choose ECS instead?
-   <details><summary>Answer</summary>For more complex networking or background workers.</details>
+1. Can new customers use App Runner?
+   <details><summary>Answer</summary>No – it closed to new customers on 30 April 2026.</details>
+2. What does AWS recommend instead?
+   <details><summary>Answer</summary>Amazon ECS Express Mode.</details>
+3. What is maintenance mode?
+   <details><summary>Answer</summary>The service keeps running for existing customers, but takes no new customers and gets no new features.</details>
 
 ## Learn more
 
-- [AWS App Runner Developer Guide](https://docs.aws.amazon.com/apprunner/latest/dg/what-is-apprunner.html)
+- [AWS App Runner availability change](https://docs.aws.amazon.com/apprunner/latest/dg/apprunner-availability-change.html)

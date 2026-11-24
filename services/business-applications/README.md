@@ -10,7 +10,7 @@ Ready-made AWS apps for **communication** and **customer service**.
 |---------|-------|--------------|
 | [Amazon SES](ses.md) | 🟢 | Sends and receives email from your app |
 | [Amazon Connect](connect.md) | 🟡 | Cloud contact centre (phone and chat support) |
-| [Amazon WorkMail](workmail.md) ⛔ | 🟡 | Business email and calendar – shutting down |
-| [Amazon Chime](chime.md) ⛔ | 🟡 | Online meetings and chat – shut down |
+| [Amazon WorkMail](workmail.md) ⛔ | 🟡 | Business email and calendar – ends 31 March 2027 |
+| [Amazon Chime](chime.md) ⛔ | 🟡 | Online meetings and chat – ended 20 February 2026 |
 
 [← Back to the main index](../../README.md)

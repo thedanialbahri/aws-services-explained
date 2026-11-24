@@ -21,9 +21,9 @@ Buying, setting up and securing laptops for every worker (especially temporary o
 |------|-------------------------------|
 | **WorkSpace** | One user's virtual desktop. |
 | **Bundle** | The desktop's size and operating system. |
-| **Directory** | Where users are managed (AWS Managed Microsoft AD, AD Connector or Simple AD). |
+| **Directory** | Where users are managed (AWS Managed Microsoft AD or AD Connector; Simple AD closed to new customers in July 2026). |
 | **Running mode** | AlwaysOn (monthly) or AutoStop (hourly). |
-| **WorkSpaces Pools** | Shared, non-persistent desktops. |
+| **WorkSpaces Pools** | Shared, non-persistent desktops – AWS announced in 2026 that this option is being retired. |
 
 ## How it works (step by step)
 

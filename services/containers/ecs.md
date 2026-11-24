@@ -41,7 +41,7 @@ Running containers by hand on servers doesn't scale: you must decide where each 
 ## When NOT to use it (and what to use instead)
 
 - **You need Kubernetes specifically.** → [EKS](eks.md).
-- **Simplest possible web app hosting.** → [App Runner](app-runner.md).
+- **Simplest possible web app hosting.** → Use ECS **Express Mode**, which sets up the load balancer, scaling and HTTPS for you. (AWS recommends it in place of [App Runner](app-runner.md), which is closed to new customers.)
 
 ## Real-world example
 

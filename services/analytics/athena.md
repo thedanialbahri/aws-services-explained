@@ -101,7 +101,7 @@ Official pricing: <https://aws.amazon.com/athena/pricing/>
 
 ## Works well with
 
-- [S3](../storage/s3.md), [Glue](glue.md), [QuickSight](quicksight.md).
+- [S3](../storage/s3.md), [Glue](glue.md), [Quick Sight](quicksight.md).
 
 ## Quick check (test yourself)
 

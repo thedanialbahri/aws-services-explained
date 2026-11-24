@@ -40,7 +40,7 @@ Running a web app on EC2 means building servers, a load balancer, Auto Scaling a
 ## When NOT to use it (and what to use instead)
 
 - **You want full control written as code.** → [EC2](ec2.md) + [Terraform/CloudFormation](../management-governance/cloudformation.md).
-- **Containerised apps with no servers to manage.** → [App Runner](../containers/app-runner.md) or [ECS on Fargate](../containers/fargate.md).
+- **Containerised apps with no servers to manage.** → [ECS](../containers/ecs.md) Express Mode or [ECS on Fargate](../containers/fargate.md).
 - **Event-driven code.** → [Lambda](lambda.md).
 
 ## Real-world example

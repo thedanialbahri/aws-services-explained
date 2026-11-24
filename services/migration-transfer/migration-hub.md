@@ -3,7 +3,7 @@
 **Category:** Migration & transfer  **Level:** 🔴 Advanced
 **Last checked against AWS docs:** 2026-11-24 (first draft – needs a human check)
 
-> ℹ️ AWS has been moving some migration features to newer tools (such as AWS Transform). Check whether Migration Hub is still open to new customers before planning with it. <!-- TODO: verify current status -->
+> ⛔ **No longer available to new customers.** AWS Migration Hub stopped accepting new customers on 7 November 2025 (so did AWS Application Discovery Service). AWS recommends **AWS Transform**, which includes Migration Hub's features. Existing customers can finish their migrations.
 
 ## In one sentence
 
@@ -28,17 +28,17 @@ Big migrations use several tools and hundreds of servers. Migration Hub shows th
 ## How it works (step by step)
 
 1. Choose a home Region.
-2. Discover servers (e.g. with Application Discovery Service).
+2. Discover servers (existing customers used Application Discovery Service).
 3. Group them into applications.
 4. Track progress as tools like MGN and DMS report in.
 
 ## When to use it
 
-- Large migrations with many servers.
+- Existing customers finishing large migrations.
 
 ## When NOT to use it (and what to use instead)
 
-- **Moving one or two servers.** Just use [MGN](application-migration-service.md).
+- **Any new migration.** → AWS Transform for planning and tracking; [MGN](application-migration-service.md) to move servers.
 
 ## Real-world example
 

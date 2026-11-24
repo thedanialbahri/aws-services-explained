@@ -3,7 +3,7 @@
 **Category:** Databases  **Level:** 🔴 Advanced
 **Last checked against AWS docs:** 2026-11-24 (first draft – needs a human check)
 
-> ℹ️ **Timestream for LiveAnalytics** has closed to new customers. New projects use **Timestream for InfluxDB**. <!-- TODO: verify date -->
+> ℹ️ **Timestream for LiveAnalytics** closed to new customers on 20 June 2025. New projects use **Timestream for InfluxDB**.
 
 ## In one sentence
 

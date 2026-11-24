@@ -21,12 +21,12 @@ A **container** packages an app with everything it needs to run (code, libraries
 | [Amazon ECS](ecs.md) | 🟡 | AWS's own system for running containers |
 | [AWS Fargate](fargate.md) | 🟡 | Runs containers without you managing any servers |
 | [Amazon ECR](ecr.md) | 🟡 | Stores your container images |
-| [AWS App Runner](app-runner.md) | 🟡 | Turns your code or container into a running web app in a few clicks |
+| [AWS App Runner](app-runner.md) ⛔ | 🟡 | Turned code into a web app – closed to new customers April 2026 |
 | [Amazon EKS](eks.md) | 🔴 | Runs Kubernetes for you |
 
 ## Which one should I use?
 
-- **Simplest way to run a web container?** → [App Runner](app-runner.md) or [ECS on Fargate](fargate.md)
+- **Simplest way to run a web container?** → [ECS](ecs.md) Express Mode or [ECS on Fargate](fargate.md)
 - **Your team already uses Kubernetes?** → [EKS](eks.md)
 - **Want AWS-native and simpler than Kubernetes?** → [ECS](ecs.md)
 

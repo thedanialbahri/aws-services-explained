@@ -95,7 +95,8 @@ resource "aws_lightsail_instance" "wp" {
   bundle_id         = "nano_3_0"
 }
 ```
-<!-- TODO: verify current bundle IDs -->
+
+`nano_3_0` was the smallest plan with a public IPv4 address when this page was written. Run `aws lightsail get-bundles` to see today's plans.
 
 ### Clean up (delete what you made)
 

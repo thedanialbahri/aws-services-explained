@@ -3,6 +3,8 @@
 **Category:** Machine learning & AI  **Level:** 🔴 Advanced
 **Last checked against AWS docs:** 2026-11-24 (first draft – needs a human check)
 
+> ⛔ **No longer available to new customers.** Amazon Kendra closed to new customers on 30 July 2026. For new projects, look at [Bedrock](bedrock.md) knowledge bases, [OpenSearch](../analytics/opensearch.md) or [AWS Quick](../analytics/quicksight.md).
+
 ## In one sentence
 
 Kendra is an intelligent search service that finds answers across your organisation's documents and systems.
@@ -31,11 +33,11 @@ Information is scattered across SharePoint, file shares and wikis, and keyword s
 
 ## When to use it
 
-- Enterprise search; as the retriever for AI assistants.
+- Existing customers only: enterprise search and finding documents for AI assistants.
 
 ## When NOT to use it (and what to use instead)
 
-- **Small projects.** → A [Bedrock](bedrock.md) knowledge base or [OpenSearch](../analytics/opensearch.md) may be cheaper.
+- **Any new project.** → A [Bedrock](bedrock.md) knowledge base, [OpenSearch](../analytics/opensearch.md) or [AWS Quick](../analytics/quicksight.md).
 
 ## Real-world example
 
@@ -55,7 +57,7 @@ Information is scattered across SharePoint, file shares and wikis, and keyword s
 
 ### Option A – Using the AWS Console (clicking in the website)
 
-1. Open **Amazon Kendra** → **Create an index** and review the editions. Cancel to avoid charges.
+Not applicable – closed to new customers.
 
 ### Option B – Using the AWS CLI (typing commands)
 
@@ -87,7 +89,7 @@ Official pricing: <https://aws.amazon.com/kendra/pricing/>
 
 ## Works well with
 
-- [Bedrock](bedrock.md), [Amazon Q](amazon-q.md), [S3](../storage/s3.md).
+- [Bedrock](bedrock.md), [S3](../storage/s3.md).
 
 ## Quick check (test yourself)
 

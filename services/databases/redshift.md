@@ -29,7 +29,7 @@ Running big reports on your live database slows down your app. Redshift copies d
 
 1. Create a Serverless workgroup or a provisioned cluster.
 2. Load data from S3, databases or streams (or use zero-ETL integrations).
-3. Run SQL queries in the Query Editor or BI tools like [QuickSight](../analytics/quicksight.md).
+3. Run SQL queries in the Query Editor or BI tools like [Quick Sight](../analytics/quicksight.md).
 
 ## When to use it
 
@@ -44,12 +44,12 @@ Running big reports on your live database slows down your app. Redshift copies d
 
 **Scenario:** A supermarket chain wants weekly sales trends from 3 years of till data.
 
-**How it helps:** Till data lands in S3 nightly and loads into Redshift. Analysts run reports in seconds and share dashboards in QuickSight.
+**How it helps:** Till data lands in S3 nightly and loads into Redshift. Analysts run reports in seconds and share dashboards in Quick Sight.
 
 **What it looks like:**
 
 ```
- Tills ──► S3 ──load──► Redshift ──► QuickSight dashboards
+ Tills ──► S3 ──load──► Redshift ──► Quick Sight dashboards
 ```
 
 ## Try it yourself
@@ -92,7 +92,7 @@ Official pricing: <https://aws.amazon.com/redshift/pricing/>
 
 ## Works well with
 
-- [S3](../storage/s3.md), [QuickSight](../analytics/quicksight.md), [Glue](../analytics/glue.md).
+- [S3](../storage/s3.md), [Quick Sight](../analytics/quicksight.md), [Glue](../analytics/glue.md).
 
 ## Quick check (test yourself)
 

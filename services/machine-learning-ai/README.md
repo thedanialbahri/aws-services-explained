@@ -9,7 +9,7 @@
 | Layer | What it means | AWS services |
 |-------|---------------|--------------|
 | **Ready-made AI** | Call an API – no ML knowledge needed | [Polly](polly.md), [Transcribe](transcribe.md), [Translate](translate.md), [Rekognition](rekognition.md), [Comprehend](comprehend.md), [Textract](textract.md), [Lex](lex.md), [Kendra](kendra.md), [Personalize](personalize.md) |
-| **Generative AI** | Use large AI models and assistants | [Bedrock](bedrock.md), [Amazon Q](amazon-q.md) |
+| **Generative AI** | Use large AI models and assistants | [Bedrock](bedrock.md), [Amazon Q](amazon-q.md) (now AWS assistant / Kiro) |
 | **Build your own** | Train and run your own models | [SageMaker](sagemaker.md) |
 
 ## Services in this category
@@ -20,12 +20,12 @@
 | [Amazon Transcribe](transcribe.md) | 🟢 | Turns speech into text |
 | [Amazon Translate](translate.md) | 🟢 | Translates text between languages |
 | [Amazon Bedrock](bedrock.md) | 🟡 | Use ready-made generative AI models through one API |
-| [Amazon Q](amazon-q.md) | 🟡 | AI assistant for work and for building on AWS |
+| [Amazon Q](amazon-q.md) ⛔ | 🟡 | AI assistants – renamed or replaced (AWS assistant, Kiro, AWS Quick) |
 | [Amazon Rekognition](rekognition.md) | 🟡 | Finds objects, text and faces in images and video |
-| [Amazon Comprehend](comprehend.md) | 🟡 | Understands text, e.g. topics and feelings |
+| [Amazon Comprehend](comprehend.md) | 🟡 | Understands text, e.g. key phrases and feelings |
 | [Amazon Textract](textract.md) | 🟡 | Reads text and tables from scanned documents |
 | [Amazon Lex](lex.md) | 🟡 | Builds chatbots and voice bots |
-| [Amazon Kendra](kendra.md) | 🔴 | Intelligent search across company documents |
+| [Amazon Kendra](kendra.md) ⛔ | 🔴 | Intelligent search across company documents – closed to new customers July 2026 |
 | [Amazon Personalize](personalize.md) | 🔴 | Product and content recommendations |
 | [Amazon SageMaker](sagemaker.md) | 🔴 | Build, train and run your own ML models |
 | [Amazon Forecast](forecast.md) ⛔ | 🔴 | Predicts future values (closed to new customers) |

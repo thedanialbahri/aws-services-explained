@@ -38,7 +38,7 @@ Kubernetes is powerful but complex to install and keep highly available. EKS man
 
 ## When NOT to use it (and what to use instead)
 
-- **Simpler needs.** → [ECS](ecs.md) or [App Runner](app-runner.md).
+- **Simpler needs.** → [ECS](ecs.md).
 
 ## Real-world example
 

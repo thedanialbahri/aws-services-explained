@@ -60,7 +60,7 @@ When something changes or breaks ("who deleted the database?"), you need evidenc
 
 ## Try it yourself
 
-> ⚠️ **Cost warning:** Event history is free. One trail delivering management events to S3 is free (you pay for S3 storage). Extra trails, data events and CloudTrail Lake cost money.
+> ⚠️ **Cost warning:** Event history is free. One trail delivering management events to S3 is free (you pay for S3 storage). Extra trails and data events cost money.
 
 ### Option A – Using the AWS Console (clicking in the website)
 
@@ -103,7 +103,7 @@ Keeping one trail is good practice. If you want to remove it:
 
 - Event history: free.
 - First copy of management events to S3: free (S3 storage charged).
-- Extra copies, data events and CloudTrail Lake: charged per event or per GB.
+- Extra copies and data events: charged per event. (CloudTrail Lake closed to new customers on 31 May 2026.)
 
 Official pricing: <https://aws.amazon.com/cloudtrail/pricing/>
 
