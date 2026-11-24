@@ -46,7 +46,7 @@ Cloud bills can grow quietly – a forgotten server, a test database left on. Wi
 
 ## Real-world example
 
-**Scenario:** Danial is learning AWS with a personal account.
+**Scenario:** Alex is learning AWS with a personal account.
 
 **The problem:** He's worried about forgetting to delete something and getting a big bill.
 
